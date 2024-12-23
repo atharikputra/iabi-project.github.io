@@ -1,0 +1,43 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const dots = document.querySelectorAll(".slider-dots .dot");
+    const sliderWrapper = document.querySelector(".slider-wrapper");
+    const sliderItems = document.querySelectorAll(".slider-item");
+    let currentIndex = 0;
+
+    function updateActiveDot() {
+        dots.forEach((dot, index) => {
+            dot.classList.toggle("active", index === currentIndex);
+        });
+    }
+    function showSlide(index) {
+        const slideWidth = sliderItems[0].clientWidth;
+        sliderWrapper.style.transform = `translateX(-${index * slideWidth}px)`;
+        currentIndex = index;
+        updateActiveDot();
+    
+        // Pause all videos, except the active slide
+        sliderItems.forEach((item, idx) => {
+            const video = item.querySelector("video");
+            if (video) {
+                if (idx === index) {
+                    video.play(); // Play the active video
+                } else {
+                    video.pause(); // Pause other videos
+                    video.currentTime = 0; // Reset video to start
+                }
+            }
+        });
+    }
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+            showSlide(index);
+        });
+    });
+
+    // Optional: Add auto-slide functionality
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % sliderItems.length;
+        showSlide(currentIndex);
+    }, 3000); // Slide setiap 3 detik
+});

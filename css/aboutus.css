@@ -1,0 +1,524 @@
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #f8a11e; /* Warna oranye */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 30px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column; /* Teks vertikal */
+    align-items: flex-start; /* Rata kiri */
+    justify-content: center;
+    line-height: 1.5; /* Spasi antar baris */
+    font-family: Arial, sans-serif;
+}
+
+
+.text-line {
+    color: #666666; /* Warna abu-abu lembut */
+    font-size: 16px; /* Ukuran font */
+    font-weight: bold; /* Font ringan */
+}
+
+/* Navigation */
+.top-nav {
+    margin-left: 170px;
+    display: flex;
+    align-items: flex-end;
+    gap: 20px; /* Jarak antar elemen */
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: #8a8585; /* Warna teks */
+    font-weight: 100;
+    font-size: 14px; /* Ukuran font */
+    position: relative; /* Dibutuhkan untuk pseudo-element */
+}
+
+/* Garis Pemisah */
+.top-nav a:not(:last-child)::after {
+    content: "|"; /* Garis pemisah */
+    color: #cccccc; /* Warna garis */
+    margin-left: 10px; /* Jarak garis dari teks */
+    position: absolute;
+    right: -10x; /* Posisi garis */
+}
+
+/* Search Bar Container */
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #cccccc; /* Border abu-abu */
+    border-radius: 4px; /* Rounded corners */
+    overflow: hidden; /* Hilangkan bagian yang keluar */
+    background-color: #f9f9f9; /* Warna latar abu-abu lembut */
+    width: 250px; /* Lebar kotak pencarian */
+    height: 30px;
+}
+
+/* Input Box */
+.search-box {
+    flex: 1; /* Isi seluruh ruang yang tersedia */
+    border: none; /* Hilangkan border default */
+    padding: 10px;
+    font-size: 14px;
+    outline: none; /* Hilangkan outline saat fokus */
+    background-color: transparent; /* Latar transparan agar sesuai container */
+}
+
+/* Search Button */
+.search-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    background-color: #8b8888; /* Latar belakang */
+    border: none; /* Hilangkan border */
+    cursor: pointer; /* Ubah cursor menjadi pointer */
+}
+
+.search-button img {
+    width: 20px; /* Ukuran ikon kaca pembesar */
+    height: 20px;
+}
+
+/* Hover Effect */
+.search-button:hover {
+    background-color: #e6e6e6; /* Warna latar saat hover */
+}
+
+/* Main Navigation */
+.main-nav {
+    background-color: #f8a11e; /* Warna kuning */
+    padding: 17px 0;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    position: relative;
+}
+
+.nav-list li:not(:last-child)::after {
+    content: "|"; /* Tambahkan garis pemisah */
+    color: #ffffff; /* Warna garis putih */
+    margin: 0 15px; /* Jarak horizontal garis dengan teks */
+    font-weight: 300; /* Font light */
+    font-size: 16px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #ffffff; /* Teks putih */
+    font-weight: 300; /* Font light */
+    font-size: 16px; /* Ukuran font */
+    padding: 10px 15px; /* Spasi dalam elemen */
+    transition: all 0.3s ease;
+}
+
+.nav-list a:hover {
+    background-color: #ffffff; /* Latar putih saat hover */
+    color: #f8a11e; /* Teks kuning saat hover */
+    border-radius: 4px; /* Efek rounded */
+}
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333333;
+    line-height: 1.6;
+}
+
+.about-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    overflow: hidden;
+}
+
+/* Background Image */
+.about-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.about-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the area */
+    filter: brightness(70%); /* Darken the background for readability */
+}
+
+/* Overlay Content */
+.about-overlay {
+    position: relative;
+    z-index: 3;
+    max-height: 600px; /* Tinggi maksimum untuk area teks */
+    overflow-y: auto; /* Aktifkan scroll vertikal */
+    padding: 30px;
+    color: #ffffff;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.7); /* Latar belakang transparan */
+    margin: 50px auto;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Tambahkan scroll bar yang lebih estetis (opsional) */
+.about-overlay::-webkit-scrollbar {
+    width: 10px; /* Lebar scrollbar */
+}
+
+.about-overlay::-webkit-scrollbar-track {
+    background: #444; /* Warna latar belakang scrollbar */
+}
+
+.about-overlay::-webkit-scrollbar-thumb {
+    background: #e7e3dd; /* Warna thumb scrollbar */
+    border-radius: 10px; /* Sudut membulat */
+}
+
+.about-overlay::-webkit-scrollbar-thumb:hover {
+    background: #ffaa33; /* Warna saat hover */
+}
+
+
+.about-overlay h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Text shadow for better visibility */
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+/* Timeline */
+.about-timeline {
+    margin: 20px 0;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.timeline-item .date {
+    background-color: #f8a11e;
+    color: #ffffff;
+    padding: 5px 14px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-right: 17px;
+}
+
+.timeline-item .detail {
+    color: #ffffff;
+    font-size: 14px;
+}
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #f8a11e;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 30px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+}
+
+.text-line {
+    color: #666666;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Navbar Abu */
+.top-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: #8a8585;
+    font-size: 14px;
+}
+
+/* Main Navbar */
+.main-nav {
+    background-color: #f8a11e;
+    padding: 17px 0;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-list li:not(:last-child)::after {
+    content: "|";
+    color: #ffffff;
+    margin: 0 15px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 15px;
+}
+
+/* Body */
+.about-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.about-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.about-overlay {
+    position: relative;
+    z-index: 3;
+    padding: 30px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 50px auto;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-overlay h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+/* Struktur Organisasi */
+.organization-photo {
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    max-width: 900px;
+}
+
+.organization-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #f8a11e;
+}
+
+/* Footer */
+.footer {
+    background-color: #333333;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    padding: 20px 0;
+    border-top: 3px solid #f8a11e;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo img {
+    height: 50px;
+}
+
+.footer-social {
+    text-align: right;
+}
+
+.footer-social .social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social a img {
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.footer-social a:hover img {
+    transform: scale(1.1);
+}
+
+/* Final Text */
+.final-text {
+    font-size: 14px;
+    margin-top: 20px;
+    font-style: italic;
+    color: #f0f0f0;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #333333; /* Warna hitam gelap */
+    color: #ffffff; /* Teks putih */
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 20px 0; /* Padding untuk memberikan ruang */
+    border-top: 3px solid #f8a11e; /* Garis oranye di atas */
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto; /* Tengah di layar */
+    padding: 0 20px; /* Spasi di sisi kiri dan kanan */
+}
+
+.footer-logo {
+    text-align: left;
+}
+
+.footer-logo .logo {
+    height: 50px; /* Ukuran logo */
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    margin: 0;
+    color: #cccccc; /* Teks abu-abu lembut */
+    font-size: 12px;
+}
+
+.footer-logo span {
+    color: #f8a11e; /* Warna oranye */
+    font-weight: bold;
+}
+
+/* Bagian Media Sosial */
+.footer-social {
+    text-align: right;
+}
+
+.footer-social p {
+    margin: 0 0 10px;
+    color: #cccccc;
+    font-size: 14px;
+}
+
+.footer-social .social-icons {
+    display: flex;
+    gap: 10px; /* Jarak antar ikon */
+}
+
+.footer-social a img {
+    width: 40px; /* Ukuran ikon media sosial */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.footer-social a:hover img {
+    transform: scale(1.1); /* Perbesar sedikit saat hover */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px; /* Tambahkan jarak antar bagian */
+    }
+
+    .footer-logo, .footer-social {
+        text-align: center;
+    }
+}
+
+.organization-photo {
+    text-align: center; /* Pusatkan gambar */
+    margin: 20px auto; /* Tambahkan jarak di sekitar gambar */
+    padding: 10px; /* Jarak di dalam div */
+    background-color: rgba(255, 255, 255, 0.8); /* Latar belakang semi-transparan */
+    border-radius: 10px; /* Sudut membulat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan */
+    max-width: 900px; /* Maksimal lebar */
+}
+
+.organization-photo img {
+    width: 100%; /* Sesuaikan gambar ke lebar kontainer */
+    height: auto; /* Pertahankan rasio aspek gambar */
+    border-radius: 10px; /* Sudut membulat gambar */
+    border: 2px solid #f8a11e; /* Tambahkan bingkai */
+}
+

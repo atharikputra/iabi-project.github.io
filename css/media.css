@@ -1,0 +1,276 @@
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #f8a11e; /* Warna oranye */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 30px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column; /* Teks vertikal */
+    align-items: flex-start; /* Rata kiri */
+    justify-content: center;
+    line-height: 1.5; /* Spasi antar baris */
+    font-family: Arial, sans-serif;
+}
+
+
+.text-line {
+    color: #666666; /* Warna abu-abu lembut */
+    font-size: 16px; /* Ukuran font */
+    font-weight: bold; /* Font ringan */
+}
+
+/* Navigation */
+.top-nav {
+    margin-left: 170px;
+    display: flex;
+    align-items: flex-end;
+    gap: 20px; /* Jarak antar elemen */
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: #8a8585; /* Warna teks */
+    font-weight: 100;
+    font-size: 14px; /* Ukuran font */
+    position: relative; /* Dibutuhkan untuk pseudo-element */
+}
+
+/* Garis Pemisah */
+.top-nav a:not(:last-child)::after {
+    content: "|"; /* Garis pemisah */
+    color: #cccccc; /* Warna garis */
+    margin-left: 10px; /* Jarak garis dari teks */
+    position: absolute;
+    right: -10x; /* Posisi garis */
+}
+
+/* Search Bar Container */
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #cccccc; /* Border abu-abu */
+    border-radius: 4px; /* Rounded corners */
+    overflow: hidden; /* Hilangkan bagian yang keluar */
+    background-color: #f9f9f9; /* Warna latar abu-abu lembut */
+    width: 250px; /* Lebar kotak pencarian */
+    height: 30px;
+}
+
+/* Input Box */
+.search-box {
+    flex: 1; /* Isi seluruh ruang yang tersedia */
+    border: none; /* Hilangkan border default */
+    padding: 10px;
+    font-size: 14px;
+    outline: none; /* Hilangkan outline saat fokus */
+    background-color: transparent; /* Latar transparan agar sesuai container */
+}
+
+/* Search Button */
+.search-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    background-color: #8b8888; /* Latar belakang */
+    border: none; /* Hilangkan border */
+    cursor: pointer; /* Ubah cursor menjadi pointer */
+}
+
+.search-button img {
+    width: 20px; /* Ukuran ikon kaca pembesar */
+    height: 20px;
+}
+
+/* Hover Effect */
+.search-button:hover {
+    background-color: #e6e6e6; /* Warna latar saat hover */
+}
+
+/* Main Navigation */
+.main-nav {
+    background-color: #f8a11e; /* Warna kuning */
+    padding: 20px 0;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    position: relative;
+}
+
+.nav-list li:not(:last-child)::after {
+    content: "|"; /* Tambahkan garis pemisah */
+    color: #ffffff; /* Warna garis putih */
+    margin: 0 15px; /* Jarak horizontal garis dengan teks */
+    font-weight: 300; /* Font light */
+    font-size: 16px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #ffffff; /* Teks putih */
+    font-weight: 300; /* Font light */
+    font-size: 16px; /* Ukuran font */
+    padding: 10px 15px; /* Spasi dalam elemen */
+    transition: all 0.3s ease;
+}
+
+.nav-list a:hover {
+    background-color: #ffffff; /* Latar putih saat hover */
+    color: #f8a11e; /* Teks kuning saat hover */
+    border-radius: 4px; /* Efek rounded */
+}
+
+/* Isi bodynya disini*/
+
+html, body {
+    height: 100%; /* Pastikan elemen mencakup seluruh tinggi viewport */
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Elemen diatur secara vertikal */
+}
+
+main {
+    flex: 1; /* Memperluas konten utama agar footer selalu berada di bawah */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 10px;
+}
+
+.tab-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 0 7px;
+    border: none;
+    border-radius: 7px;
+    background-color: #4e5157;
+    color: white;
+    cursor: pointer;
+}
+
+.tab-buttons button:hover {
+    background-color: #005bb5;
+}
+
+section {
+    display: none;
+    padding: 10px 20px;
+}
+
+section.active {
+    display: block;
+}
+
+.news-item, .gallery-grid {
+    margin-top: 20px;
+}
+
+.news-item {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.news-item h2 {
+    color: #0073e6;
+    font-size: 18px;
+    margin: 0;
+}
+
+.news-item p {
+    margin: 5px 0;
+}
+
+.news-item a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+
+
+/* Footer*/
+.footer {
+    background-color: #333333; /* Warna hitam gelap */
+    color: #ffffff; /* Teks putih */
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Footer Top Section */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    border-top: 3px solid #f8a11e; /* Garis oranye di atas */
+}
+
+.footer-logo {
+    text-align: left;
+}
+
+.footer-logo .logo {
+    height: 40px; /* Ukuran logo */
+    margin-bottom: 10px;
+}
+
+.footer-logo p {
+    margin: 0;
+    color: #cccccc; /* Teks abu-abu lembut */
+    font-size: 12px;
+}
+
+.footer-logo span {
+    color: #f8a11e; /* Warna oranye */
+    font-weight: bold;
+}
+
+/* Social Media */
+.footer-social {
+    text-align: right;
+}
+
+.footer-social p {
+    margin: 0 0 10px;
+    color: #cccccc;
+}
+
+.footer-social a img {
+    width:auto; /* Ukuran ikon media sosial */
+    height: 40px;
+    margin-right: 3px;
+    padding: 0px;
+}
+
