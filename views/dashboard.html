@@ -4,48 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - IABI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/dashboard.css">
 </head>
 <body>
-    <!-- Header -->
     <header>
-        <!-- Logo -->
-        <div class="logo">
-            <img src="../foto/logo.png" alt="IABI Logo">
-            <div class="text-container">
-                <span class="text-line">IKATAN AHLI BANDAR UDARA</span>
-                <span class="text-line">INDONESIA</span>
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div>
+                <a href="aboutus.html">About Us</a>
+                <a href="contactus.html">Contact Us</a>
+                <a href="#">Portal</a>
             </div>
         </div>
 
-        <!-- Navbar Abu -->
-        <nav class="top-nav">
-            <a href="aboutus.html">About Us</a>
-            <a href="contactus.html">Contact Us</a>
-            <a href="#">Member Login</a>
-            <a href="#">Portal</a>
+        <!-- Main Navbar -->
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="../foto/fotologoiabi/logoiabi.png" alt="IABI Logo">
+            </div>
+            <ul class="nav-list">
+                <li><a href="dashboard.html">Home</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="#">Certification</a></li>
+                <li><a href="#">Training</a></li>
+                <li><a href="#">Publications</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="media.html">News</a></li>
+                <li><a href="#">LSP-BI</a></li>
+            </ul>
+            <div class="right-nav">
+                <a href="#">Login/Sign Up</a>
+                <div class="language-selector">EN</div>
+            </div>
         </nav>
-        <div class="search-container">
-            <input type="text" class="search-box">
-            <button class="search-button">
-                <img src="../foto/search.png" alt="Search">
-            </button>
-        </div>
     </header>
-
-    <!-- Navbar Kuning -->
-    <nav class="main-nav">
-        <ul class="nav-list">
-            <li><a href="dashboard.html">HOME</a></li>
-            <li><a href="membership.html">MEMBERSHIP</a></li>
-            <li><a href="certification.html" target="_blank">CERTIFICATION</a></li>
-            <li><a href="#">TRAINING</a></li>
-            <li><a href="#">PUBLICATIONS</a></li>
-            <li><a href="#">EVENTS</a></li>
-            <li><a href="media.html">NEWS</a></li>
-            <li><a href="#">LSP-BI</a></li>
-        </ul>
-    </nav>
 
     <!-- Slider -->
     <div class="image-slider">
@@ -67,69 +60,130 @@
         </div>
     </div>
     </section>
-    
-    <!-- Body -->
-    <main class="content">
+
+<!-- Body -->
+    <main class="container">
         <!-- Welcome Section -->
-        <section class="welcome-section">
-            <div class="welcome-container">
-                <div class="welcome-left">
-                    <h2>WELCOME TO IABI</h2>
-                    <p>Indonesia is one of the countries in the world with the highest growth of air transport in the last 10 years.</p>
-                </div>
-                <div class="welcome-right">
-                    <div class="vision-mission">
-                        <h3>Vision</h3>
-                        <p>Become a container of airport experts is important and strategic expertise in maintaining the professional standard of airports.</p>
+        <section class="welcome-section mb-5">
+            <div class="welcome-text">
+                <h2>Welcome to <span style="color: #ff9900;">IABI!</span></h2>
+                <p><strong>Ikatan Ahli Bandar Udara Indonesia (IABI)</strong> memperkuat pergerakan dalam meningkatkan profesionalisme dan standar operasional di seluruh bandar udara tanah air. Mari berbagi pengetahuan, memperluas jaringan, dan memajukan industri penerbangan Indonesia. Dengan semangat inovasi dan kolaborasi, kita siap menghadapi tantangan global industri penerbangan.</p>
+            </div>
+            <div class="welcome-image">
+                <img src="../foto/gambarslide1.png" alt="Airplane">
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section class="row mb-5">
+            <div class="col-md-6">
+                <div class="section">
+                    <div class="section-content">
+                        <img class="section-image" src="" alt="Events">
+                        <div class="section-description">
+                            <p></p>
+                            <p class="date"></p>
+                        </div>
                     </div>
-                    <div class="vision-mission">
-                        <h3>Mission</h3>
-                        <p>Improve the quality and maintain the dignity of airport professionals to compete in national and international forums.</p>
+                    <div class="section-footer">
+                        <div class="navigation">
+                            <button>&lt;</button>
+                            <button>&gt;</button>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-6">
+                <div class="desc-events">
+                    <h3>Events</h3>
+                    <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+                    <a href="#">See more →</a>
+            </div>
+        </section>
+
+        <!-- Latest News Section -->
+        <section class="latest-news-section text-center mb-5">
+            <h3>Latest News</h3>
+            <p>Stay updated with the latest news and updates from IABI.</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="news-item">
+                        <img src="../foto/ilustrasi-bandara1.jpg" alt="News Image">
+                        <h5>Medical Research Studies</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="news-item">
+                        <img src="../foto/ilustrasi-bandara1.jpg" alt="News Image">
+                        <h5>Medical Research Studies</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="news-item">
+                        <img src="../foto/ilustrasi-bandara1.jpg" alt="News Image">
+                        <h5>Medical Research Studies</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <a href="#">Read More</a>
                     </div>
                 </div>
             </div>
         </section>
-    
-        <!-- Info Section -->
-        <section class="info-section">
-            <div class="info-block">
-                <h3>Event</h3>
-                <img src="../foto/pelatihan.png" alt="Event">
-                <p>Acara Pertemuan Persiapan Pelatihan IABI</p>
-            </div>
-            <div class="info-block">
-                <h3>Last News</h3>
-                <ul>
-                    <li><span>2016-07-26</span> INFO PELATIHAN IABI Angkatan 1 akan dimulai pada bulan Mei...</li>
-                    <li><span>2016-07-26</span> SELAMAT TAHUN BARU... Kami mengucapkan Selamat Tahun Baru 2016...</li>
-                </ul>
-                <a href="media.html">More News ></a>
-            </div>
-            <div class="info-block">
-                <h3>Top Publications</h3>
-                <p>
-                    <strong>Dangerous Goods Regulations (DGR)</strong><br>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra...
-                </p>
-                <a href="#">View More ></a>
-            </div>
-        </section>
-    
-        <!-- Gallery and Tweets -->
-        <section class="gallery-tweets-section">
-            <div class="event-gallery">
-                <h3>Event Galleries</h3>
-                <div class="gallery-images">
-                    <img src="../foto/event1.png" alt="Gallery Image 1">
-                    <img src="../foto/event2.png" alt="Gallery Image 2">
-                    <img src="../foto/event3.png" alt="Gallery Image 3">
+
+        <!-- Publication Section -->
+        <section class="row mb-5">
+            <div class="col-md-6">
+                <div class="desc-publications">
+                    <h3>Publications</h3>
+                    <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+                    <a href="#">See more →</a>
                 </div>
             </div>
-            <div class="tweets">
-                <h3>Tweets by @contact2op</h3>
-                <div class="tweet-box">
-                    <p>Embed</p>
-                    <a href="#">View on Twitter</a>
+    
+            <div class="col-md-6">
+                <div class="publications-section">
+                    <div class="section-title">Top Publications</div>
+                    <div class="publications-content">
+                        <h4></h4>
+                        <p></p>
+                        <div class="publications-footer">
+                            <a href="#">Read More</a>
+                        </div>
+                    </div>
+                    <div class="navigation-buttons">
+                        <button class="prev-button">&lt;</button>
+                        <button class="next-button">&gt;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galleries Section -->
+        <section class="galleries-section mb-5">
+            <div class="col-md-12">
+                <div class="galleries-header">
+                    <h4>Galleries</h4>
+                    <a href="#" class="see-more">See more →</a>
+                </div>
+                <div class="galleries-slider">
+                    <div class="galleries-container">
+                        <div class="gallery-item">
+                            <img src="../foto/gallery1.png" alt="Gallery 1">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../foto/gallery2.png" alt="Gallery 2">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../foto/gallery3.png" alt="Gallery 3">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../foto/gallery4.png" alt="Gallery 4">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -139,11 +193,9 @@
     <footer class="footer">
         <div class="footer-top">
             <div class="footer-logo">
-                <!-- Bagian Kiri Footer -->
-                <img src="../foto/logo.png" alt="IABI Logo" class="logo">
+                <img src="../foto/fotologoiabi/logoiabi.png" alt="IABI Logo" class="logo">
                 <p>&copy; 2024<br>Ikatan Ahli Bandar Udara<br><span>INDONESIA</span></p>
             </div>
-                <!-- Bagian Kanan Footer -->
             <div class="footer-social">
                 <p>Follow us on</p>
                 <a href="#"><img src="../foto/Facebook-Logosu.png" alt="Facebook"></a>

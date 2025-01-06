@@ -41,3 +41,115 @@ document.addEventListener("DOMContentLoaded", () => {
         showSlide(currentIndex);
     }, 3000); // Slide setiap 3 detik
 });
+
+
+
+//Events
+document.addEventListener('DOMContentLoaded', () => {
+    const eventsData = [
+        {
+            image: '../foto/gambarslide1.png',
+            description: 'Event 1 description',
+            date: '01 Jan 2025',
+            link: 'event1.html'
+
+        },
+        {
+            image: '../foto/gambarslide2.png',
+            description: 'Event 2 description',
+            date: '02 Jan 2025',
+            link: 'event1.html'
+
+        }
+    ];
+
+    function createSlider(data, section) {
+        let index = 0;
+
+        const updateContent = () => {
+            const image = section.querySelector('.section-image');
+            const description = section.querySelector('.section-description p');
+            const date = section.querySelector('.section-description .date');
+
+            image.src = data[index].image;
+            description.textContent = data[index].description;
+            date.textContent = data[index].date;
+
+            image.onclick = () => {
+                window.location.href = data[index].link;
+            };
+        };
+
+        section.querySelector('.navigation button:nth-child(1)').addEventListener('click', () => {
+            index = (index - 1 + data.length) % data.length;
+            updateContent();
+        });
+
+        section.querySelector('.navigation button:nth-child(2)').addEventListener('click', () => {
+            index = (index + 1) % data.length;
+            updateContent();
+        });
+
+        updateContent();
+    }
+
+    createSlider(eventsData, document.querySelector('.col-md-6:nth-child(1) .section'));
+    createSlider(publicationsData, document.querySelector('.col-md-6:nth-child(2) .section'));
+});
+
+
+// Publications
+document.addEventListener('DOMContentLoaded', () => {
+    const publications = [
+        {
+            title: "Dangerous Goods Regulations (DGR)",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra, tellus sit amet congue vulputate, nisi erat iaculis nibh, vitae feugiat sapien ante eget mauris. Cras elit nisl, rhoncus non euismod vitae, vehicula ut elit.",
+        },
+        {
+            title: "Airport Security Standards",
+            description: "Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris.",
+        },
+        {
+            title: "Passenger Safety Guidelines",
+            description: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean nonummy hendrerit mauris. Phasellus porta.",
+        }
+    ];
+
+    let currentIndex = 0;
+
+    const titleElement = document.querySelector('.publications-content h4');
+    const descriptionElement = document.querySelector('.publications-content p');
+    const imageElement = document.querySelector('.publications-image');
+
+    function updateContent(index) {
+        const publication = publications[index];
+        titleElement.textContent = publication.title;
+        descriptionElement.textContent = publication.description;
+        imageElement.textContent = publication.image;
+    }
+
+    document.querySelector('.prev-button').addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + publications.length) % publications.length;
+        updateContent(currentIndex);
+    });
+
+    document.querySelector('.next-button').addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % publications.length;
+        updateContent(currentIndex);
+    });
+
+    updateContent(currentIndex);
+});
+
+// Galleries
+document.addEventListener("DOMContentLoaded", () => {
+    const galleriesContainer = document.querySelector(".galleries-container");
+
+    galleriesContainer.addEventListener("wheel", (e) => {
+        e.preventDefault();
+        galleriesContainer.scrollBy({
+            left: e.deltaY < 0 ? -300 : 300,
+            behavior: "smooth",
+        });
+    });
+});
