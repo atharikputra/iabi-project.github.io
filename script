@@ -153,3 +153,28 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+// Partners
+document.addEventListener("DOMContentLoaded", () => {
+    const partnersLogos = document.querySelector(".partners-logos");
+    let animationInterval;
+
+    const startScrolling = () => {
+        animationInterval = setInterval(() => {
+            partnersLogos.scrollBy({ left: 1, behavior: "smooth" });
+        }, 30); // Sesuaikan kecepatan scroll di sini
+    };
+
+    const stopScrolling = () => {
+        clearInterval(animationInterval);
+    };
+
+    // Mulai scrolling otomatis
+    startScrolling();
+
+    // Hentikan scrolling ketika mouse berada di atas elemen
+    partnersLogos.addEventListener("mouseover", stopScrolling);
+
+    // Lanjutkan scrolling ketika mouse keluar dari elemen
+    partnersLogos.addEventListener("mouseout", startScrolling);
+});

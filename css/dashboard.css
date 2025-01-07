@@ -1,4 +1,16 @@
-        /* Top Bar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Sama di semua halaman */
+}
+        
+        /* Header */
         .top-bar {
             background-color: #1f1e1d;
             padding: 5px 15px;
@@ -10,7 +22,7 @@
         }
 
         .top-bar a {
-            color: rgb(255, 255, 255);
+            color: #ffffff;
             text-decoration: none;
             margin-left: 20px;
         }
@@ -520,9 +532,8 @@
             margin-bottom: 15px;
         }
 
-        .galleries-header h4 {
+        .galleries-header h3 {
             color: #ff9900;
-            font-size: 20px;
             margin: 0;
         }
 
@@ -568,7 +579,43 @@
             object-fit: cover;
         }
 
-        /* Footer Container */
+        /* Partners Section */
+        .partners-section {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .partners-title {
+            color: #ff9900;
+            margin-bottom: 20px;
+        }
+
+        .partners-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .partners-logos img {
+            max-width: 150px;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        @keyframes scroll-logos {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+
+        /* Footer Section */
         .footer {
             background-color: #333333; /* Warna hitam gelap */
             color: #ffffff; /* Teks putih */
@@ -581,7 +628,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px 50px;
-            border-top: 3px solid #f8a11e; /* Garis oranye di atas */
+            border-top: 1px solid #f8a11e; /* Garis oranye di atas */
         }
 
         .footer-logo {

@@ -1,148 +1,96 @@
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 100px;
-    background-color: #ffffff;
-    border-bottom: 2px solid #f8a11e; /* Warna oranye */
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    height: 50px;
-    margin-right: 30px;
-}
-
-.text-container {
-    display: flex;
-    flex-direction: column; /* Teks vertikal */
-    align-items: flex-start; /* Rata kiri */
-    justify-content: center;
-    line-height: 1.5; /* Spasi antar baris */
-    font-family: Arial, sans-serif;
-}
-
-
-.text-line {
-    color: #666666; /* Warna abu-abu lembut */
-    font-size: 16px; /* Ukuran font */
-    font-weight: bold; /* Font ringan */
-}
-
-/* Navigation */
-.top-nav {
-    margin-left: 170px;
-    display: flex;
-    align-items: flex-end;
-    gap: 20px; /* Jarak antar elemen */
-}
-
-.top-nav a {
-    text-decoration: none;
-    color: #8a8585; /* Warna teks */
-    font-weight: 100;
-    font-size: 14px; /* Ukuran font */
-    position: relative; /* Dibutuhkan untuk pseudo-element */
-}
-
-/* Garis Pemisah */
-.top-nav a:not(:last-child)::after {
-    content: "|"; /* Garis pemisah */
-    color: #cccccc; /* Warna garis */
-    margin-left: 10px; /* Jarak garis dari teks */
-    position: absolute;
-    right: -10x; /* Posisi garis */
-}
-
-/* Search Bar Container */
-.search-container {
-    display: flex;
-    align-items: center;
-    border: 1px solid #cccccc; /* Border abu-abu */
-    border-radius: 4px; /* Rounded corners */
-    overflow: hidden; /* Hilangkan bagian yang keluar */
-    background-color: #f9f9f9; /* Warna latar abu-abu lembut */
-    width: 250px; /* Lebar kotak pencarian */
-    height: 30px;
-}
-
-/* Input Box */
-.search-box {
-    flex: 1; /* Isi seluruh ruang yang tersedia */
-    border: none; /* Hilangkan border default */
-    padding: 10px;
-    font-size: 14px;
-    outline: none; /* Hilangkan outline saat fokus */
-    background-color: transparent; /* Latar transparan agar sesuai container */
-}
-
-/* Search Button */
-.search-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30px;
-    background-color: #8b8888; /* Latar belakang */
-    border: none; /* Hilangkan border */
-    cursor: pointer; /* Ubah cursor menjadi pointer */
-}
-
-.search-button img {
-    width: 20px; /* Ukuran ikon kaca pembesar */
-    height: 20px;
-}
-
-/* Hover Effect */
-.search-button:hover {
-    background-color: #e6e6e6; /* Warna latar saat hover */
-}
-
-/* Main Navigation */
-.main-nav {
-    background-color: #f8a11e; /* Warna kuning */
-    padding: 17px 0;
-}
-
-.nav-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style-type: none;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.nav-list li {
-    position: relative;
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Sama di semua halaman */
 }
+ 
+ /* Header */
+        .top-bar {
+            background-color: #1f1e1d;
+            padding: 5px 15px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            color: white;
+            font-size: 12px;
+        }
 
-.nav-list li:not(:last-child)::after {
-    content: "|"; /* Tambahkan garis pemisah */
-    color: #ffffff; /* Warna garis putih */
-    margin: 0 15px; /* Jarak horizontal garis dengan teks */
-    font-weight: 300; /* Font light */
-    font-size: 16px;
-}
+        .top-bar a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 20px;
+        }
 
-.nav-list a {
-    text-decoration: none;
-    color: #ffffff; /* Teks putih */
-    font-weight: 300; /* Font light */
-    font-size: 16px; /* Ukuran font */
-    padding: 10px 15px; /* Spasi dalam elemen */
-    transition: all 0.3s ease;
-}
+        /* Main Navbar */
+        nav.main-nav {
+            background-color: #333;
+            color: white;
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 0.2px solid #ff9900; /* Border Bottom */
+        }
 
-.nav-list a:hover {
-    background-color: #ffffff; /* Latar putih saat hover */
-    color: #f8a11e; /* Teks kuning saat hover */
-    border-radius: 4px; /* Efek rounded */
-}
+        nav.main-nav .logo img {
+            height: 50px;
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-list li a {
+            color: white;
+            text-decoration: none;
+
+            font-size: 14px;
+            transition: color 0.3s ease; /* Animation on hover */
+        }
+
+        .nav-list li a:hover {
+            color: #ff9900;
+        }
+
+        .right-nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .right-nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease; /* Animation on hover */
+        }
+
+        .right-nav a:hover {
+            color: #ff9900;
+        }
+
+        .language-selector {
+            color: white;
+            border: 1px solid white;
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Animation on hover */
+        }
+
+        .language-selector:hover {
+            background-color: #555;
+        }
 
 /* Certification Image */
 .certification-image img {
@@ -150,3 +98,56 @@ header {
     height: 100vh;
     object-fit: cover;
 }
+
+        /* Footer Section */
+        .footer {
+            background-color: #333333; /* Warna hitam gelap */
+            color: #ffffff; /* Teks putih */
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            border-top: 1px solid #ff9900; /* Garis oranye di atas */
+        }
+
+        .footer-logo {
+            text-align: left;
+        }
+
+        .footer-logo .logo {
+            height: 40px; /* Ukuran logo */
+            margin-bottom: 10px;
+        }
+
+        .footer-logo p {
+            margin: 0;
+            color: #cccccc; /* Teks abu-abu lembut */
+            font-size: 12px;
+        }
+
+        .footer-logo span {
+            color: #f8a11e; /* Warna oranye */
+            font-weight: bold;
+        }
+
+        /* Social Media */
+        .footer-social {
+            text-align: right;
+        }
+
+        .footer-social p {
+            margin: 0 0 10px;
+            color: #cccccc;
+        }
+
+        .footer-social a img {
+            width:auto; /* Ukuran ikon media sosial */
+            height: 50px;
+            margin-right: 3px;
+            padding: 0px;
+        }
