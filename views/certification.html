@@ -111,53 +111,14 @@
                 <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
                 <a href="#"><i class="fa-brands fa-facebook"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
             <!-- Copyright -->
             <p class="footer-copyright">
-                Copyright &copy; 2024 All rights reserved | Ikatan Ahli Bandar Udara</a>
+                Copyright &copy; 2024 All rights reserved | Ikatan Ahli Bandar Udara
             </p>
         </div>
     </footer>
 </body>
-<script>
-    // Select all pages
-    const pages = document.querySelectorAll(".page");
-    let currentPageIndex = 0; // Start from the first page
-
-    function navigatePage(direction) {
-        // Hide the current page
-        pages[currentPageIndex].classList.remove("active");
-
-        // Update the page index
-        currentPageIndex += direction;
-
-        // Loop through pages
-        if (currentPageIndex < 0) {
-            currentPageIndex = pages.length - 1; // Go to the last page
-        } else if (currentPageIndex >= pages.length) {
-            currentPageIndex = 0; // Go back to the first page
-        }
-
-        // Show the new page
-        pages[currentPageIndex].classList.add("active");
-    }
-
-    function setMenu(menuName) {
-    // Update the title and description
-    const menuTitle = document.getElementById('menu-title');
-    const menuDescription = document.getElementById('menu-description');
-
-    menuTitle.textContent = menuName;
-    menuDescription.textContent = `Informasi mengenai ${menuName}. Lorem ipsum dolor sit amet, consectetur adipiscing elit.`;
-
-    // Update the active button
-    const buttons = document.querySelectorAll('.menu-button');
-    buttons.forEach(button => button.classList.remove('active'));
-    buttons.forEach(button => {
-        if (button.textContent === menuName) {
-            button.classList.add('active');
-        }
-    });
-}
-</script>
+<script src="../js/certification.js"></script>
 </html>

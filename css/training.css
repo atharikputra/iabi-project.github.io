@@ -11,87 +11,86 @@ html, body {
 }
  
  /* Header */
-        .top-bar {
-            background-color: #1f1e1d;
-            padding: 5px 15px;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            color: white;
-            font-size: 12px;
-        }
+.top-bar {
+    background-color: #1f1e1d;
+    padding: 5px 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+}
 
-        .top-bar a {
-            color: #ffffff;
-            text-decoration: none;
-            margin-left: 20px;
-        }
+.top-bar a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+}
 
-        /* Main Navbar */
-        nav.main-nav {
-            background-color: #333;
-            color: white;
-            padding: 10px 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 0.2px solid #ff9900; /* Border Bottom */
-        }
+/* Main Navbar */
+nav.main-nav {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.2px solid #ff9900; /* Border Bottom */
+}
 
-        nav.main-nav .logo img {
-            height: 50px;
-        }
+nav.main-nav .logo img {
+    height: 50px;
+}
 
-        .nav-list {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
+.nav-list {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
-        .nav-list li a {
-            color: white;
-            text-decoration: none;
+.nav-list li a {
+    color: white;
+    text-decoration: none;
 
-            font-size: 14px;
-            transition: color 0.3s ease; /* Animation on hover */
-        }
+    font-size: 14px;
+    transition: color 0.3s ease; /* Animation on hover */
+}
 
-        .nav-list li a:hover {
-            color: #ff9900;
-        }
+.nav-list li a:hover {
+    color: #ff9900;
+}
 
-        .right-nav {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
+.right-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 
-        .right-nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.3s ease; /* Animation on hover */
-        }
+.right-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease; /* Animation on hover */
+}
 
-        .right-nav a:hover {
-            color: #ff9900;
-        }
+.right-nav a:hover {
+    color: #ff9900;
+}
 
-        .language-selector {
-            color: white;
-            border: 1px solid white;
-            padding: 5px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease; /* Animation on hover */
-        }
+.language-selector {
+    color: white;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Animation on hover */
+}
 
-        .language-selector:hover {
-            background-color: #555;
-        }
-
+.language-selector:hover {
+    background-color: #555;
+}
 
 /* Training Page Styling */
 .training-page {
@@ -111,7 +110,7 @@ html, body {
     top: 70px; /* Jarak dari atas */
     left: 130px; /* Jarak dari kiri */
     font-size: 3rem; /* Ukuran font */
-    font-weight: bold; /* Teks tebal */            
+    font-weight: bold; /* Teks tebal */    
 }
 
 .text-warning {

@@ -1,3 +1,4 @@
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -9,92 +10,92 @@ html, body {
     padding: 0;
     font-family: Arial, sans-serif; /* Sama di semua halaman */
 }
- 
- /* Header */
-        .top-bar {
-            background-color: #1f1e1d;
-            padding: 5px 15px;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            color: white;
-            font-size: 12px;
-        }
 
-        .top-bar a {
-            color: #ffffff;
-            text-decoration: none;
-            margin-left: 20px;
-        }
+/* Header */
+.top-bar {
+    background-color: #1f1e1d;
+    padding: 5px 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+}
 
-        /* Main Navbar */
-        nav.main-nav {
-            background-color: #333;
-            color: white;
-            padding: 10px 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 0.2px solid #ff9900; /* Border Bottom */
-        }
+.top-bar a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+}
 
-        nav.main-nav .logo img {
-            height: 50px;
-        }
+/* Main Navbar */
+nav.main-nav {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.2px solid #ff9900; /* Border Bottom */
+}
 
-        .nav-list {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
+nav.main-nav .logo img {
+    height: 50px;
+}
 
-        .nav-list li a {
-            color: white;
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.3s ease; /* Animation on hover */
-        }
+.nav-list {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
-        .nav-list li a:hover {
-            color: #ff9900;
-        }
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease; /* Animation on hover */
+}
 
-        .right-nav {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
+.nav-list li a:hover {
+    color: #ff9900;
+}
 
-        .right-nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.3s ease; /* Animation on hover */
-        }
+.right-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 
-        .right-nav a:hover {
-            color: #ff9900;
-        }
+.right-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease; /* Animation on hover */
+}
 
-        .language-selector {
-            color: white;
-            border: 1px solid white;
-            padding: 5px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease; /* Animation on hover */
-        }
+.right-nav a:hover {
+    color: #ff9900;
+}
 
-        .language-selector:hover {
-            background-color: #555;
-        }
+.language-selector {
+    color: white;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Animation on hover */
+}
+
+.language-selector:hover {
+    background-color: #555;
+}
 
 /* Contact Us Section */
 .contact-us-section {
     position: relative;
-    background: url('../foto/panopto-contact-us-header.jpeg');
+    background: url('../foto/panopto-contact-us-header.jpeg') no-repeat center center/cover;
     min-height: 100vh;
     align-items: center;
 }
@@ -107,6 +108,18 @@ html, body {
     height: 100%;
     background: rgba(0, 0, 0, 0.6); /* Darken effect */
     z-index: 1;
+}
+
+@media (min-width: 1200px) {
+    .h2, h2 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+}
+
+.text-warning {
+    --bs-text-opacity: 1;
+    color: #ff9900 !important;
 }
 
 .contact-us-section .container {
@@ -135,7 +148,7 @@ html, body {
 }
 
 .card img {
-    width: 50px;
+    width: 75px;
     height: 50px;
     margin-bottom: 15px;
 }
@@ -228,4 +241,3 @@ html, body {
 .footer-copyright a:hover {
     color: #fff; /* Warna hover putih */
 }
-

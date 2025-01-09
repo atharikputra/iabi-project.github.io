@@ -10,143 +10,143 @@ html, body {
     font-family: Arial, sans-serif; /* Sama di semua halaman */
 }
         
-        /* Header */
-        .top-bar {
-            background-color: #1f1e1d;
-            padding: 5px 15px;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            color: white;
-            font-size: 12px;
-        }
+/* Header */
+.top-bar {
+    background-color: #1f1e1d;
+    padding: 5px 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+}
 
-        .top-bar a {
-            color: #ffffff;
-            text-decoration: none;
-            margin-left: 20px;
-        }
+.top-bar a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+}
 
-        /* Main Navbar */
-        nav.main-nav {
-            background-color: #333;
-            color: white;
-            padding: 10px 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 0.2px solid #ff9900; /* Border Bottom */
-        }
+/* Main Navbar */
+nav.main-nav {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.2px solid #ff9900; /* Border Bottom */
+}
 
-        nav.main-nav .logo img {
-            height: 50px;
-        }
+nav.main-nav .logo img {
+    height: 50px;
+}
 
-        .nav-list {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
+.nav-list {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
-        .nav-list li a {
-            color: white;
-            text-decoration: none;
+.nav-list li a {
+    color: white;
+    text-decoration: none;
 
-            font-size: 14px;
-            transition: color 0.3s ease; /* Animation on hover */
-        }
+    font-size: 14px;
+    transition: color 0.3s ease; /* Animation on hover */
+}
 
-        .nav-list li a:hover {
-            color: #ff9900;
-        }
+.nav-list li a:hover {
+    color: #ff9900;
+}
 
-        .right-nav {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
+.right-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 
-        .right-nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.3s ease; /* Animation on hover */
-        }
+.right-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease; /* Animation on hover */
+}
 
-        .right-nav a:hover {
-            color: #ff9900;
-        }
+.right-nav a:hover {
+    color: #ff9900;
+}
 
-        .language-selector {
-            color: white;
-            border: 1px solid white;
-            padding: 5px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease; /* Animation on hover */
-        }
+.language-selector {
+    color: white;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Animation on hover */
+}
 
-        .language-selector:hover {
-            background-color: #555;
-        }
+.language-selector:hover {
+    background-color: #555;
+}
 
-        /* Slider */
-        /* Image Slider */
-        .image-slider {
-            position: relative;
-            width: 100%;
-            height: 600px; /* Sesuaikan tinggi slider */
-            overflow: hidden;
-        }
+/* Slider */
+/* Image Slider */
+.image-slider {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Sesuaikan tinggi slider */
+    overflow: hidden;
+}
 
-        .slider-wrapper {
-            display: flex;
-            width: 100%;
-            height: 100%;
-            transition: transform 0.5s ease-in-out;
-        }
+.slider-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
 
-        .slider-item {
-            flex: 0 0 100%;
-            height: 100%; /* Sesuaikan dengan slider */
-            position: relative; /* Untuk gradient */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+.slider-item {
+    flex: 0 0 100%;
+    height: 100%; /* Sesuaikan dengan slider */
+    position: relative; /* Untuk gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        .slider-item::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                rgba(0, 0, 0, 0.6), /* Gradient abu-abu hitam di atas */
-                rgba(0, 0, 0, 0.3)
-            );
-            z-index: 1; /* Pastikan gradient berada di atas gambar */
-        }
+.slider-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+rgba(0, 0, 0, 0.6), /* Gradient abu-abu hitam di atas */
+rgba(0, 0, 0, 0.3)
+    );
+    z-index: 1; /* Pastikan gradient berada di atas gambar */
+}
 
-        .slider-item img {
-            width: 100%;
-            height: 120%;
-            object-fit: fill; 
-            position: relative;
-            z-index: 0; /* Gambar berada di bawah gradient */
-        }
+.slider-item img {
+    width: 100%;
+    height: 120%;
+    object-fit: fill; 
+    position: relative;
+    z-index: 0; /* Gambar berada di bawah gradient */
+}
 
-        .slider-item video {
-            width: 100%; /* Pastikan lebar sesuai dengan slider */
-            height: 100%; /* Pastikan tinggi sesuai dengan slider */
-            object-fit: cover; /* Buat video stretch tanpa distorsi */
-            position: absolute; /* Agar video menempati seluruh area slide */
-            top: 0; /* Tetapkan posisi atas */
-            left: 0; /* Tetapkan posisi kiri */
-        }
+.slider-item video {
+    width: 100%; /* Pastikan lebar sesuai dengan slider */
+    height: 100%; /* Pastikan tinggi sesuai dengan slider */
+    object-fit: cover; /* Buat video stretch tanpa distorsi */
+    position: absolute; /* Agar video menempati seluruh area slide */
+    top: 0; /* Tetapkan posisi atas */
+    left: 0; /* Tetapkan posisi kiri */
+}
 
 /* Slider Text */
 .slider-item {
@@ -174,477 +174,477 @@ html, body {
     margin: 5px 0 0;
 }
 
-        /* Slider Dots */
-        .slider-dots {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 20px; /* Jarak antar titik */
-            z-index: 2;
-        }
-
-        .slider-dots .dot {
-            width: 12px;
-            height: 12px;
-            background-color: rgba(255, 255, 255, 0.5); /* Warna putih transparan */
-            border-radius: 50%;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .slider-dots .dot.active {
-            background-color: #ffffff; /* Warna putih solid untuk dot aktif */
-        }
-
-
-        /* Content */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5efef;
-        }
-
-        .container {
-            max-width: 1070px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5efef;
-        }
-
-        .mb-5 {
-            margin-top: 5rem;
-            margin-bottom: 10rem!important;
-        }
-
-        h3, h4, h5 {
-            color: #ff9900;
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-            margin: -10px;
-        }
-
-        .col-md-6, .col-md-4, .col-md-8, .col-md-12 {
-            padding: 10px;
-        }
-
-        /* Welcome Section */
-        h2 {
-            color: #ff9900;
-            font-weight: bold;
-        }
-
-        .welcome-section {
-            display: flex;
-            align-items: center;
-            margin-bottom: 40px;
-            gap: 20px; /* Mengatur jarak antara teks dan gambar */
-        }
-
-        .welcome-text {
-            flex: 1;
-            padding-right: 20px;
-            text-align: left; /* Align text to the left */
-        }
-
-        .welcome-text h2 {
-            margin-bottom: 10px;
-        }
-
-        .welcome-text p {
-            color: #333;
-            line-height: 1.6;
-            text-align: justify;
-        }
-
-        .welcome-image {
-            flex: 1;
-            text-align: center;
-        }
-
-        .welcome-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-
-        /* Events Section */
-        .section {
-            margin: 0px auto;
-            max-width: 600px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            height: 350px; /* Fixed height for consistent layout */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .section-content {
-            position: relative;
-            flex-grow: 1;
-            overflow: hidden;
-        }
-
-        .section-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensures the image fits the container */
-            display: block;
-            cursor: pointer; /* Makes the image clickable */
-
-        }
-
-        .section-description {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            color: #fff;
-            padding: 10px;
-            box-sizing: border-box;
-        }
-
-        .desc-events a {
-            color: #00bcd4;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .section-description p {
-            margin: 0;
-        }
-
-        .section-description .date {
-            text-align: right;
-            font-size: 12px;
-            color: #ccc;
-        }
-
-        .section-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px;
-        }
-
-        .section-footer a {
-            color: #007bff;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .section-footer .navigation {
-            display: flex;
-            gap: 10px;
-        }
-
-        .section-footer .navigation button {
-            background-color: #ccc;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .section-footer .navigation button:hover {
-            background-color: #bbb;
-        }
-
-        .desc-events {
-            text-align: left;
-        }
-
-        .col-md-6 {
-            flex: 0 0 50%;
-            max-width: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* Latest News Section */
-        .activity-item {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .news-item {
-            background-color: #fff;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .news-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 2px;
-        }
-
-        .news-item h5 {
-            margin-top: 10px;
-            margin-bottom: 10px;
-            color: #ff9900;
-        }
-
-        .news-item p {
-            color: #666;
-        }
-
-        .news-item a {
-            text-decoration: none;
-            color: #007bff;
-            font-size: 14px;
-        }
-
-        .news-item a:hover {
-            text-decoration: underline;
-        }
-
-        .see-more a{
-            color: #00bcd4;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .nav-button {
-            background-color: #c5c5c5;
-            color: #000000;
-            border: none;
-            padding: 8px 12px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-            margin-top: 15px;
-        }
-        
-        .nav-button:hover {
-            background-color: #bbb9b9;
-        }
-
-        /* Publications Section */
-        .col-md-6 {
-            flex: 0 0 48%;
-            box-sizing: border-box;
-        }
-
-        .desc-publications {
-            text-align: right;
-        }
-
-        .desc-publications h3 {
-            color: #ff9900;
-            margin-bottom: 15px;
-        }
-
-        .desc-publications p {
-            line-height: 1.6;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .desc-publications a {
-            color: #00bcd4;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .desc-publications a:hover {
-            text-decoration: underline;
-        }
-
-        .publications-section {
-            border: 1px solid #ddd;
-            padding: 20px;
-            background-color: #fff;
-            width: 100%;
-            height: 300px; /* Fixed height for consistent box size */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-        }
-
-        .section-title {
-            font-size: 18px;
-            font-weight: bold;
-            text-align: left;
-            border-bottom: 2px solid #000;
-            margin-bottom: 15px;
-            padding-bottom: 5px;
-        }
-
-        .publications-content {
-            flex: 1;
-            padding-right: 20px;
-        }
-
-        .publications-content h4 {
-            margin-bottom: 10px;
-            color: #333;
-            font-size: 18px;
-        }
-
-        .publications-content p {
-            font-size: 14px;
-            color: #555;
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
-
-        .publications-footer a {
-            color: #ff5722;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        .publications-footer a:hover {
-            text-decoration: underline;
-        }
-
-        .publications-image {
-            flex: 0 0 150px;
-            height: 150px;
-            background-color: #ddd;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            color: #666;
-            border-radius: 8px;
-        }
-
-        .navigation-buttons {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 10px;
-        }
-
-        .navigation-buttons button {
-            padding: 5px 10px;
-            border: 1px solid #ccc;
-            background-color: #f5f5f5;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-
-        .navigation-buttons button:hover {
-            background-color: #e0e0e0;
-        }
-
-        /* Galleries Section */
-        .galleries-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .galleries-header h3 {
-            color: #ff9900;
-            margin: 0;
-        }
-
-        .galleries-header .see-more {
-            color: #00bcd4;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .galleries-header .see-more:hover {
-            text-decoration: underline;
-        }
-
-        .galleries-slider {
-            position: relative;
-        }
-
-        .galleries-container {
-            display: flex;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            gap: 15px;
-            scroll-behavior: smooth;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background-color: #fff;
-        }
-
-        .gallery-item {
-            flex: 0 0 auto;
-            width: 300px;
-            height: 200px;
-            overflow: hidden;
-            border-radius: 8px;
-            scroll-snap-align: start;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Partners Section */
-        .partners-section {
-            margin-top: 50px;
-            text-align: center;
-        }
-
-        .partners-title {
-            color: #ff9900;
-            margin-bottom: 20px;
-        }
-
-        .partners-logos {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .partners-logos img {
-            max-width: 150px;
-            height: auto;
-            object-fit: contain;
-            border-radius: 8px;
-        }
-
-        @keyframes scroll-logos {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
+/* Slider Dots */
+.slider-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px; /* Jarak antar titik */
+    z-index: 2;
+}
+
+.slider-dots .dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5); /* Warna putih transparan */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slider-dots .dot.active {
+    background-color: #ffffff; /* Warna putih solid untuk dot aktif */
+}
+
+
+/* Content */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5efef;
+}
+
+.container {
+    max-width: 1070px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5efef;
+}
+
+.mb-5 {
+    margin-top: 5rem;
+    margin-bottom: 10rem!important;
+}
+
+h3, h4, h5 {
+    color: #ff9900;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+}
+
+.col-md-6, .col-md-4, .col-md-8, .col-md-12 {
+    padding: 10px;
+}
+
+/* Welcome Section */
+h2 {
+    color: #ff9900;
+    font-weight: bold;
+}
+
+.welcome-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 20px; /* Mengatur jarak antara teks dan gambar */
+}
+
+.welcome-text {
+    flex: 1;
+    padding-right: 20px;
+    text-align: left; /* Align text to the left */
+}
+
+.welcome-text h2 {
+    margin-bottom: 10px;
+}
+
+.welcome-text p {
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.welcome-image {
+    flex: 1;
+    text-align: center;
+}
+
+.welcome-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+/* Events Section */
+.section {
+    margin: 0px auto;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    height: 350px; /* Fixed height for consistent layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section-content {
+    position: relative;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.section-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fits the container */
+    display: block;
+    cursor: pointer; /* Makes the image clickable */
+
+}
+
+.section-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.desc-events a {
+    color: #00bcd4;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.section-description p {
+    margin: 0;
+}
+
+.section-description .date {
+    text-align: right;
+    font-size: 12px;
+    color: #ccc;
+}
+
+.section-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.section-footer a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.section-footer .navigation {
+    display: flex;
+    gap: 10px;
+}
+
+.section-footer .navigation button {
+    background-color: #ccc;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.section-footer .navigation button:hover {
+    background-color: #bbb;
+}
+
+.desc-events {
+    text-align: left;
+}
+
+.col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Latest News Section */
+.activity-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.news-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+}
+
+.news-item h5 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #ff9900;
+}
+
+.news-item p {
+    color: #666;
+}
+
+.news-item a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 14px;
+}
+
+.news-item a:hover {
+    text-decoration: underline;
+}
+
+.see-more a{
+    color: #00bcd4;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-button {
+    background-color: #c5c5c5;
+    color: #000000;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 15px;
+}
+
+.nav-button:hover {
+    background-color: #bbb9b9;
+}
+
+/* Publications Section */
+.col-md-6 {
+    flex: 0 0 48%;
+    box-sizing: border-box;
+}
+
+.desc-publications {
+    text-align: right;
+}
+
+.desc-publications h3 {
+    color: #ff9900;
+    margin-bottom: 15px;
+}
+
+.desc-publications p {
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.desc-publications a {
+    color: #00bcd4;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.desc-publications a:hover {
+    text-decoration: underline;
+}
+
+.publications-section {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fff;
+    width: 100%;
+    height: 300px; /* Fixed height for consistent box size */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    border-bottom: 2px solid #000;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+}
+
+.publications-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.publications-content h4 {
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 18px;
+}
+
+.publications-content p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.publications-footer a {
+    color: #ff5722;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.publications-footer a:hover {
+    text-decoration: underline;
+}
+
+.publications-image {
+    flex: 0 0 150px;
+    height: 150px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #666;
+    border-radius: 8px;
+}
+
+.navigation-buttons {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.navigation-buttons button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.navigation-buttons button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Galleries Section */
+.galleries-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.galleries-header h3 {
+    color: #ff9900;
+    margin: 0;
+}
+
+.galleries-header .see-more {
+    color: #00bcd4;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.galleries-header .see-more:hover {
+    text-decoration: underline;
+}
+
+.galleries-slider {
+    position: relative;
+}
+
+.galleries-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 15px;
+    scroll-behavior: smooth;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.gallery-item {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    scroll-snap-align: start;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Partners Section */
+.partners-section {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.partners-title {
+    color: #ff9900;
+    margin-bottom: 20px;
+}
+
+.partners-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.partners-logos img {
+    max-width: 150px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+@keyframes scroll-logos {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
 
 
 /* Footer Styling */
@@ -714,12 +714,3 @@ html, body {
     margin-top: 20px;
 }
 
-.footer-copyright a {
-    color: #ffb900; /* Warna hijau */
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-copyright a:hover {
-    color: #fff; /* Warna hover putih */
-}
