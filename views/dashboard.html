@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - IABI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/dashboard.css">
 </head>
@@ -15,7 +16,7 @@
             <div>
                 <a href="aboutus.html">About Us</a>
                 <a href="contactus.html">Contact Us</a>
-                <a href="#">Portal</a>
+                <a href="portal.html">Portal</a>
             </div>
         </div>
 
@@ -36,7 +37,7 @@
                 <li><a href="lspbi.html">LSP-BI</a></li>
             </ul>
             <div class="right-nav">
-                <a href="#">Login/Sign Up</a>
+                <a href="login.html">Login / Sign Up</a>
                 <div class="language-selector">EN</div>
             </div>
         </nav>
@@ -47,16 +48,35 @@
         <div class="slider-wrapper">
             <div class="slider-item">
                 <img src="../foto/gambarslide2.png" alt="Airplane 1">
+                <div class="slider-text">
+                    <h2>Terminal 3 Soekarno Hatta</h2>
+                    <p>Airport Tangerang</p>
+                </div>
             </div>
             <div class="slider-item">
                 <img src="../foto/gambarslide1.png" alt="Airplane 2">
+                <div class="slider-text">
+                    <h2>Terminal 3 Soekarno Hatta</h2>
+                    <p>Airport Tangerang</p>
+                </div>
             </div>
             <div class="slider-item">
                 <img src="../foto/gambarslide3.png" alt="Airplane 3">
+                <div class="slider-text">
+                    <h2>Terminal 3 Soekarno Hatta</h2>
+                    <p>Airport Tangerang</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <video autoplay muted loop>
+                    <source src="../foto/WhatsApp Video 2024-12-21 at 21.40.08.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
         <div class="slider-dots">
             <span class="dot active"></span>
+            <span class="dot"></span>
             <span class="dot"></span>
             <span class="dot"></span>
         </div>
@@ -133,6 +153,9 @@
                         <a href="#">Read More</a>
                     </div>
                 </div>
+                <div class="see-more">
+                    <a href="news.html">See more →</a>
+                </div>
             </div>
         </section>
 
@@ -142,7 +165,7 @@
                 <div class="desc-publications">
                     <h3>Publications</h3>
                     <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
-                    <a href="#">See more →</a>
+                    <a href="publications.html">See more →</a>
                 </div>
             </div>
     
@@ -152,9 +175,11 @@
                     <div class="publications-content">
                         <h4></h4>
                         <p></p>
+                        <!--
                         <div class="publications-footer">
                             <a href="#">Read More</a>
                         </div>
+                    -->
                     </div>
                     <div class="navigation-buttons">
                         <button class="prev-button">&lt;</button>
@@ -169,21 +194,21 @@
             <div class="col-md-12">
                 <div class="galleries-header">
                     <h3>Galleries</h3>
-                    <a href="#" class="see-more">See more →</a>
+                    <a href="galleries.html" class="see-more">See more →</a>
                 </div>
                 <div class="galleries-slider">
                     <div class="galleries-container">
                         <div class="gallery-item">
-                            <img src="../foto/gallery1.png" alt="Gallery 1">
+                            <img src="../foto/fotologoiabi/event6.png" alt="Gallery 1">
                         </div>
                         <div class="gallery-item">
-                            <img src="../foto/gallery2.png" alt="Gallery 2">
+                            <img src="../foto/fotologoiabi/event6.png" alt="Gallery 2">
                         </div>
                         <div class="gallery-item">
-                            <img src="../foto/gallery3.png" alt="Gallery 3">
+                            <img src="../foto/fotologoiabi/event6.png" alt="Gallery 3">
                         </div>
                         <div class="gallery-item">
-                            <img src="../foto/gallery4.png" alt="Gallery 4">
+                            <img src="../foto/fotologoiabi/event6.png" alt="Gallery 4">
                         </div>
                     </div>
                 </div>
@@ -207,16 +232,31 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-top">
-            <div class="footer-logo">
-                <img src="../foto/fotologoiabi/logoiabi.png" alt="IABI Logo" class="logo">
-                <p>&copy; 2024<br>Ikatan Ahli Bandar Udara<br><span>INDONESIA</span></p>
+        <div class="footer-container text-center">
+            <!-- Logo -->
+            <img src="../foto/fotologoiabi/logoiabi.png" alt="Logo" class="footer-logo">
+            <!-- Navigation Links -->
+            <ul class="footer-links">
+                <li><a href="dashboard.html">Home</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="certification.html">Certification</a></li>
+                <li><a href="training.html">Training</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="galleries.html">Galleries</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="lspbi.html">LSP-BI</a></li>
+            </ul>
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
             </div>
-            <div class="footer-social">
-                <p>Follow us on</p>
-                <a href="#"><img src="../foto/Facebook-Logosu.png" alt="Facebook"></a>
-                <a href="#"><img src="../foto/X_logo.png" alt="X"></a>
-            </div>
+            <!-- Copyright -->
+            <p class="footer-copyright">
+                Copyright &copy; 2024 All rights reserved | Ikatan Ahli Bandar Udara</a>
+            </p>
         </div>
     </footer>
 

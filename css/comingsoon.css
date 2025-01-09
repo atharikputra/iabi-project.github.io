@@ -1,0 +1,54 @@
+/* Custom CSS */
+.coming-soon-page {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('../foto/fotologoiabi/comingsoon.png') no-repeat center center/cover;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Overlay gelap */
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 3px; /* Jarak di bawah title */
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 10px; /* Jarak di bawah subtitle */
+}
+
+.btn-custom {
+    background-color: #f39c12;
+    color: #333;
+    border: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 100px;
+    transition: all 0.3s ease;
+    margin-top: 10px; /* Jarak di atas tombol */
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #f39c12;
+    padding: 20px; /* Tambahkan padding untuk ruang di dalam kontainer */
+}
+
+.btn-custom:hover {
+    background-color: #333;
+    color: #f39c12;
+}

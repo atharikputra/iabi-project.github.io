@@ -1,3 +1,4 @@
+// Slider
 document.addEventListener("DOMContentLoaded", () => {
     const dots = document.querySelectorAll(".slider-dots .dot");
     const sliderWrapper = document.querySelector(".slider-wrapper");
@@ -9,21 +10,22 @@ document.addEventListener("DOMContentLoaded", () => {
             dot.classList.toggle("active", index === currentIndex);
         });
     }
+
     function showSlide(index) {
         const slideWidth = sliderItems[0].clientWidth;
         sliderWrapper.style.transform = `translateX(-${index * slideWidth}px)`;
         currentIndex = index;
         updateActiveDot();
-    
-        // Pause all videos, except the active slide
+
+        // Pause all videos except the current slide
         sliderItems.forEach((item, idx) => {
             const video = item.querySelector("video");
             if (video) {
                 if (idx === index) {
-                    video.play(); // Play the active video
+                    video.play(); // Play video on active slide
                 } else {
                     video.pause(); // Pause other videos
-                    video.currentTime = 0; // Reset video to start
+                    video.currentTime = 0; // Reset video to the beginning
                 }
             }
         });
@@ -35,11 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Optional: Add auto-slide functionality
     setInterval(() => {
         currentIndex = (currentIndex + 1) % sliderItems.length;
         showSlide(currentIndex);
-    }, 3000); // Slide setiap 3 detik
+    }, 3000);
 });
 
 
@@ -102,17 +103,9 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const publications = [
         {
-            title: "Dangerous Goods Regulations (DGR)",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam pharetra, tellus sit amet congue vulputate, nisi erat iaculis nibh, vitae feugiat sapien ante eget mauris. Cras elit nisl, rhoncus non euismod vitae, vehicula ut elit.",
+            title: "Coming Soon",
+            description: " ",
         },
-        {
-            title: "Airport Security Standards",
-            description: "Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris.",
-        },
-        {
-            title: "Passenger Safety Guidelines",
-            description: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean nonummy hendrerit mauris. Phasellus porta.",
-        }
     ];
 
     let currentIndex = 0;

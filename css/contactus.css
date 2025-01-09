@@ -131,7 +131,7 @@ html, body {
 .card {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 4px;
-    padding: 90px 50px;
+    padding: 60px 50px;
 }
 
 .card img {
@@ -152,57 +152,80 @@ html, body {
     line-height: 1.6;
 }
 
-        /* Footer Section */
-        .footer {
-            background-color: #333333; /* Warna hitam gelap */
-            color: #ffffff; /* Teks putih */
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-        }
+/* Footer Styling */
+.footer {
+    background-color: #333; /* Background hitam */
+    color: #fff; /* Teks putih */
+    padding: 30px 0; /* Spasi atas-bawah */
+    font-family: Arial, sans-serif;
+    border-top: 1px solid #ff9900; /* Garis oranye di atas */
+}
 
-        .footer-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-            border-top: 1px solid #ff9900; /* Garis oranye di atas */
-        }
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+    margin-top: 20px;
+}
 
-        .footer-logo {
-            text-align: left;
-        }
+.footer-logo {
+    max-width: 100px; /* Atur lebar maksimal logo */
+    margin-bottom: 20px; /* Jarak bawah */
+}
 
-        .footer-logo .logo {
-            height: 40px; /* Ukuran logo */
-            margin-bottom: 10px;
-        }
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
 
-        .footer-logo p {
-            margin: 0;
-            color: #cccccc; /* Teks abu-abu lembut */
-            font-size: 12px;
-        }
+.footer-links li {
+    display: inline-block;
+}
 
-        .footer-logo span {
-            color: #f8a11e; /* Warna oranye */
-            font-weight: bold;
-        }
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
 
-        /* Social Media */
-        .footer-social {
-            text-align: right;
-        }
+.footer-links a:hover {
+    color: #ffb900; /* Warna hover hijau */
+}
 
-        .footer-social p {
-            margin: 0 0 10px;
-            color: #cccccc;
-        }
+.social-icons {
+    margin: 20px 0;
+}
 
-        .footer-social a img {
-            width:auto; /* Ukuran ikon media sosial */
-            height: 50px;
-            margin-right: 3px;
-            padding: 0px;
-        }
+.social-icons a {
+    margin: 0 10px;
+    color: #ffb900; /* Warna ikon hijau */
+    font-size: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
 
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #fff; /* Warna hover putih */
+}
+
+.footer-copyright {
+    font-size: 12px;
+    color: #aaa; /* Warna abu-abu */
+    margin-top: 20px;
+}
+
+.footer-copyright a {
+    color: #ffb900; /* Warna hijau */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-copyright a:hover {
+    color: #fff; /* Warna hover putih */
+}
 

@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Sama di semua halaman */
+}
+ 
+ /* Header */
+        .top-bar {
+            background-color: #1f1e1d;
+            padding: 5px 15px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            color: white;
+            font-size: 12px;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        /* Main Navbar */
+        nav.main-nav {
+            background-color: #333;
+            color: white;
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 0.2px solid #ff9900; /* Border Bottom */
+        }
+
+        nav.main-nav .logo img {
+            height: 50px;
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-list li a {
+            color: white;
+            text-decoration: none;
+
+            font-size: 14px;
+            transition: color 0.3s ease; /* Animation on hover */
+        }
+
+        .nav-list li a:hover {
+            color: #ff9900;
+        }
+
+        .right-nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .right-nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease; /* Animation on hover */
+        }
+
+        .right-nav a:hover {
+            color: #ff9900;
+        }
+
+        .language-selector {
+            color: white;
+            border: 1px solid white;
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Animation on hover */
+        }
+
+        .language-selector:hover {
+            background-color: #555;
+        }
+
+
+/* Training Page Styling */
+.training-page {
+    position: relative;
+    background: url('../foto/fotologoiabi/eventbg.png') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #222; /* Backup color jika gambar tidak ada */
+    filter: brightness(1); /* Menurunkan brightness background */
+}
+
+.training-title {
+    position: absolute;
+    top: 70px; /* Jarak dari atas */
+    left: 130px; /* Jarak dari kiri */
+    font-size: 3rem; /* Ukuran font */
+    font-weight: bold; /* Teks tebal */            
+}
+
+.text-warning {
+    --bs-text-opacity: 1;
+    color: #ff9900 !important;
+}
+
+.class-title{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffc107;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title-underline {
+    width: 280px; /* Panjang garis */
+    height: 2px; /* Ketebalan garis */
+    background-color: white; /* Warna garis */
+    border: none;
+    margin-top: -10px; /* Jarak dari title */
+    margin-left: 315px;
+}
+
+.content-box p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    font-weight: lighter;
+    color: rgb(255, 255, 255);
+}
+
+.content-box {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    padding: 40px;
+    color: #fff;
+    box-shadow: 0px 4px 15px rgba(255, 153, 0, 0.6);
+    width: 900px;
+}
+
+.training-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.training-item {
+    display: flex;
+    justify-content: center;
+}
+
+.training-card {
+    border-radius: 10px;
+    width: 100%;
+    max-width: 840px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border: 1px solid #f39c12; /* Border oranye */
+    transition: transform 0.3s ease; /* Animation saat hover */
+}
+
+/* Training Card 1 */
+.training-card-1 {
+    background: url('../foto/fotologoiabi/training.png') no-repeat center center/cover;
+}
+
+/* Training Card 2 */
+.training-card-2 {
+    background: url('../foto/fotologoiabi/training2.png') no-repeat center center/cover;
+}
+
+.training-card:hover {
+    transform: scale(1.03);
+}
+
+.training-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f39c12;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.training-text small {
+    display: block;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 5px;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #333; /* Background hitam */
+    color: #fff; /* Teks putih */
+    padding: 30px 0; /* Spasi atas-bawah */
+    font-family: Arial, sans-serif;
+    border-top: 1px solid #ff9900; /* Garis oranye di atas */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+    margin-top: 20px;
+}
+
+.footer-logo {
+    max-width: 100px; /* Atur lebar maksimal logo */
+    margin-bottom: 20px; /* Jarak bawah */
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-links li {
+    display: inline-block;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffb900; /* Warna hover hijau */
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #ffb900; /* Warna ikon hijau */
+    font-size: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #fff; /* Warna hover putih */
+}
+
+.footer-copyright {
+    font-size: 12px;
+    color: #aaa; /* Warna abu-abu */
+    margin-top: 20px;
+}
+
+.footer-copyright a {
+    color: #ffb900; /* Warna hijau */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-copyright a:hover {
+    color: #fff; /* Warna hover putih */
+}
+

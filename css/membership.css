@@ -92,62 +92,129 @@ html, body {
             background-color: #555;
         }
 
-/* Certification Image */
-.certification-image img {
+/* Membership Page Styling */
+.membership-page {
+    position: relative;
+    min-height: 100vh;
     width: 100%;
-    height: 100vh;
-    object-fit: cover;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Warna hitam sebagai cadangan */
 }
 
-        /* Footer Section */
-        .footer {
-            background-color: #333333; /* Warna hitam gelap */
-            color: #ffffff; /* Teks putih */
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-        }
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../foto/fotologoiabi/membershipbg.png') no-repeat center center/cover; /* Gambar background */
+    z-index: 1; /* Di belakang semua elemen */
+}
 
-        .footer-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-            border-top: 1px solid #ff9900; /* Garis oranye di atas */
-        }
+.membership-overlay {
+    position: absolute;
+    top: 65%; /* Untuk memposisikan secara vertikal */
+    left: 50%; /* Untuk memposisikan secara horizontal */
+    transform: translate(-50%, -50%); /* Menempatkan gambar di tengah */
+    width: 80%; /* Sesuaikan ukuran lebar (persentase atau piksel) */
+    height: auto; /* Otomatis menjaga proporsi tinggi */
+    object-fit: contain; /* Menjaga proporsi tanpa memotong gambar */
+    z-index: 2; /* Tetap di atas background */
+    opacity: 0.9; /* Transparansi opsional */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Tambahkan animasi transisi */
+}
 
-        .footer-logo {
-            text-align: left;
-        }
+.membership-overlay:hover {
+    transform: translate(-50%, -50%) scale(1.1); /* Membesar saat dihover */
+    opacity: 1; /* Mengurangi transparansi */
+}
 
-        .footer-logo .logo {
-            height: 40px; /* Ukuran logo */
-            margin-bottom: 10px;
-        }
+.membership-title {
+    position: absolute; /* Ubah menjadi absolute untuk mengatur posisi relatif ke container */
+    top: 70px; /* Jarak dari atas */
+    left: 130px; /* Jarak dari kiri */
+    z-index: 3; /* Tetap di atas overlay */
+    color: #f39c12; /* Warna oranye */
+    font-size: 3rem; /* Ukuran font */
+    font-weight: bold; /* Teks tebal */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); /* Bayangan teks */
+}
+/* Footer Styling */
+.footer {
+    background-color: #333; /* Background hitam */
+    color: #fff; /* Teks putih */
+    padding: 30px 0; /* Spasi atas-bawah */
+    font-family: Arial, sans-serif;
+    border-top: 1px solid #ff9900; /* Garis oranye di atas */
+}
 
-        .footer-logo p {
-            margin: 0;
-            color: #cccccc; /* Teks abu-abu lembut */
-            font-size: 12px;
-        }
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+    margin-top: 20px;
+}
 
-        .footer-logo span {
-            color: #f8a11e; /* Warna oranye */
-            font-weight: bold;
-        }
+.footer-logo {
+    max-width: 100px; /* Atur lebar maksimal logo */
+    margin-bottom: 20px; /* Jarak bawah */
+}
 
-        /* Social Media */
-        .footer-social {
-            text-align: right;
-        }
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
 
-        .footer-social p {
-            margin: 0 0 10px;
-            color: #cccccc;
-        }
+.footer-links li {
+    display: inline-block;
+}
 
-        .footer-social a img {
-            width:auto; /* Ukuran ikon media sosial */
-            height: 50px;
-            margin-right: 3px;
-            padding: 0px;
-        }
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffb900; /* Warna hover hijau */
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #ffb900; /* Warna ikon hijau */
+    font-size: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #fff; /* Warna hover putih */
+}
+
+.footer-copyright {
+    font-size: 12px;
+    color: #aaa; /* Warna abu-abu */
+    margin-top: 20px;
+}
+
+.footer-copyright a {
+    color: #ffb900; /* Warna hijau */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-copyright a:hover {
+    color: #fff; /* Warna hover putih */
+}
